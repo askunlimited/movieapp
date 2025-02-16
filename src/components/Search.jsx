@@ -1,10 +1,20 @@
+import React from 'react'
 
-// eslint-disable-next-line react/prop-types
 const Search = ({searchTerm, setSearchTerm}) => {
-    return (
-        <div className="text-white text-3xl">{searchTerm}</div>
-    )
-    }
+  return (
+    <div className='search'>
+        <div>
+            <img src="search.svg" alt="search" />
+            <input 
+                type="text" 
+                name="search" 
+                placeholder='Search thousands of movies' 
+                value={searchTerm} 
+                onChange={(e)=> setSearchTerm(e.target.value)} 
+            />
+        </div>
+    </div>
+  )
+}
 
-    export default Search
-
+export default Search
